@@ -1,0 +1,34 @@
+{
+  "scopeName": "source.OChameleon",
+  "fileTypes": [],
+  "patterns": [{ "include": "#expression" }],
+  "repository": {
+    "expression": {
+      "patterns": [{ "include": "#keyword" }, { "include": "#paren-expression" }]
+    },
+    "keyword": {
+      "patterns": [
+        {
+          "match": ":|\\¦|\\|",
+          "name": "keyword.declaration"
+        },
+        {
+          "match": "❙|=​|→​|↦​|〈​|〉​|≤​|≥​|<​|>​|∧​|∨​|⋀​|⋁​|⩔​",
+          "name": "keyword.logic"
+        }
+      ]
+    },
+    "paren-expression": {
+      "begin": "\\(",
+      "end": "\\)",
+      "beginCaptures": {
+        "0": { "name": "punctuation.paren.open" }
+      },
+      "endCaptures": {
+        "0": { "name": "punctuation.paren.close" }
+      },
+      "name": "expression.group",
+      "patterns": [{ "include": "#expression" }]
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+    "name": "OChameleon",
+    "displayName": "OChameleon",
+    "description": "OChameleon language support for VS Code",
+    "version": "0.0.0",
+    "publisher": "OChameleon",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "keywords": [
+        "OChameleon",
+        "Symbolic Computing",
+        "Computer Algebra",
+        "Theorem Provers",
+        "Proof Assistant",
+        "Automated Proofs",
+        "InfoView"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ochameleon/ochameleon/extension-vscode"
+    },
+    "homepage": "https://ochameleon.github.io",
+    "activationEvents": [
+        "onLanguage:OChameleon"
+    ],
+    "main": "./src/extension.js",
+    "contributes": {
+        "languages": [
+            {
+                "id": "OChameleon",
+                "extensions": [
+                    ".mleon"
+                ],
+                "aliases": [
+                    "ochameleon"
+                ]
+            }
+        ],
+        "grammars": [
+            {
+                "language": "OChameleon",
+                "scopeName": "source.OChameleon",
+                "path": "./grammars/OChameleon.tmGrammar.json"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -p ./ --watch"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.60.0",
+        "js-yaml": "^4.1.0",
+        "typescript": "^4.4.3",
+        "vscode-test": "^1.5.2"
+    }
+}
