@@ -1,19 +1,20 @@
 import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
     const shortcuts: { [key: string]: string } = {
+        /* METAFORMAL */
+
         "@sb" : "❙​",
         "@bb" : "¦​",
 
+        /* ... */
+
         "@to" : "→", /* ⟶ */
         "@rightarrow": "→",
+        "@leftrightarrow" : "↔", /* ⟷ */
+
         "@mapsto" : "↦", /* ⟼ */
 
-        "@lto" : "→",
-        "@lrightarrow": "→",
-        "@lmapsto" : "↦",
-
-        "@langle" : "〈",
-        "@rangle" : "〉",
+        /* ... */
 
         "@leq" : "≤", /* <̱ */
         "@geq" : "≥", /* >̱ */
@@ -22,13 +23,35 @@ export function activate(context: vscode.ExtensionContext) {
         "@bigwedge" : "⋀",
         "@bigvee" : "⋁",
         
+        /* LOGIC VERSION */
+
+        "@l" : "​",
+
+        "@l=" : "=​",
+
+        "@lto" : "→​",
+        "@lrightarrow": "→​",
+        "@imp" : "→​",
+        "@lleftrightarrow" : "↔​",
+        "@iff" : "↔​",
+
+        "@lmapsto" : "↦​",
+
+        "@langle" : "〈​",
+        "@rangle" : "〉​",
+
         "@lleq" : "≤​", /* <̱ */
         "@lgeq" : "≥​", /* >̱ */
         "@lwedge" : "∧​",
+        "@and" : "∧​",
         "@lvee" : "∨​",
+        "@or" : "∨​",
         "@lbigwedge" : "⋀​",
+        "@forall" : "⋀​",
         "@lbigvee" : "⋁​",
+        "@exists" : "⋁​",
         "@ldoublevee" : "⩔​​", /* ⩖ */
+        "@doubleor" : "⩔​​",
         /*
         "@Rightarrow" : "⟹",
         "@Leftarrow" : "⟸",
@@ -139,11 +162,9 @@ export function activate(context: vscode.ExtensionContext) {
         "@Psi" : "Ψ",
         "@Omega" : "Ω",
 
-
-        "@exists" : "∃",
-        "@forall" : "∀",
-
-        /* !¡ ?¿ ‽ ⸘ */
+        "@ok" : "¡", /* ! */
+        "@boh" : "¿", /* ? */
+        "@bok" : "⸘" /* ‽ */
         /* ⁄ */
 
         /* ― */

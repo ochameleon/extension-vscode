@@ -4,7 +4,11 @@
   "patterns": [{ "include": "#expression" }],
   "repository": {
     "expression": {
-      "patterns": [{ "include": "#keyword" }, { "include": "#paren-expression" }]
+      "patterns": [
+        { "include": "#keyword" },
+        { "include": "#paren-expression" },
+        { "include": "#string" }
+      ]
     },
     "keyword": {
       "patterns": [
@@ -13,7 +17,7 @@
           "name": "keyword.declaration"
         },
         {
-          "match": "❙|=​|→​|↦​|〈​|〉​|≤​|≥​|<​|>​|∧​|∨​|⋀​|⋁​|⩔​",
+          "match": "❙|=​|→​|↔​|↦​|〈​|〉​|≤​|≥​|<​|>​|∧​|∨​|⋀​|⋁​|⩔​",
           "name": "keyword.logic"
         }
       ]
@@ -29,6 +33,14 @@
       },
       "name": "expression.group",
       "patterns": [{ "include": "#expression" }]
+    },
+    "string": {
+      "patterns": [
+        {
+          "match": "\"(\\\\.|[^\"\\\\])*\"",
+          "name": "string.quoted.double"
+        }
+      ]
     }
   }
 }

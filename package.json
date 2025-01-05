@@ -21,20 +21,18 @@
         "url": "https://github.com/ochameleon/ochameleon/extension-vscode"
     },
     "homepage": "https://ochameleon.github.io",
-    "activationEvents": [
-        "onLanguage:OChameleon"
-    ],
     "main": "./src/extension.js",
     "contributes": {
         "languages": [
             {
                 "id": "OChameleon",
                 "extensions": [
-                    ".mleon"
+                    ".meleon"
                 ],
                 "aliases": [
                     "ochameleon"
-                ]
+                ],
+                "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
@@ -43,7 +41,11 @@
                 "scopeName": "source.OChameleon",
                 "path": "./grammars/OChameleon.tmGrammar.json"
             }
-        ]
+        ],
+        "[source.OChameleon]": {
+            "editor.autoClosingBrackets": "always"
+        }
+
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",

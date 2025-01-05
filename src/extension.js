@@ -27,29 +27,44 @@ exports.deactivate = exports.activate = void 0;
 const vscode = __importStar(require("vscode"));
 function activate(context) {
     const shortcuts = {
+        /* METAFORMAL */
         "@sb": "❙​",
         "@bb": "¦​",
+        /* ... */
         "@to": "→",
         "@rightarrow": "→",
+        "@leftrightarrow": "↔",
         "@mapsto": "↦",
-        "@lto": "→",
-        "@lrightarrow": "→",
-        "@lmapsto": "↦",
-        "@langle": "〈",
-        "@rangle": "〉",
+        /* ... */
         "@leq": "≤",
         "@geq": "≥",
         "@wedge": "∧",
         "@vee": "∨",
         "@bigwedge": "⋀",
         "@bigvee": "⋁",
+        /* LOGIC VERSION */
+        "@l": "​",
+        "@l=": "=​",
+        "@lto": "→​",
+        "@lrightarrow": "→​",
+        "@imp": "→​",
+        "@lleftrightarrow": "↔​",
+        "@iff": "↔​",
+        "@lmapsto": "↦​",
+        "@langle": "〈​",
+        "@rangle": "〉​",
         "@lleq": "≤​",
         "@lgeq": "≥​",
         "@lwedge": "∧​",
+        "@and": "∧​",
         "@lvee": "∨​",
+        "@or": "∨​",
         "@lbigwedge": "⋀​",
+        "@forall": "⋀​",
         "@lbigvee": "⋁​",
+        "@exists": "⋁​",
         "@ldoublevee": "⩔​​",
+        "@doubleor": "⩔​​",
         /*
         "@Rightarrow" : "⟹",
         "@Leftarrow" : "⟸",
@@ -150,9 +165,9 @@ function activate(context) {
         "@Chi": "Χ",
         "@Psi": "Ψ",
         "@Omega": "Ω",
-        "@exists": "∃",
-        "@forall": "∀",
-        /* !¡ ?¿ ‽ ⸘ */
+        "@ok": "¡",
+        "@boh": "¿",
+        "@bok": "⸘" /* ‽ */
         /* ⁄ */
         /* ― */
     };
