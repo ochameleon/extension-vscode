@@ -16,6 +16,9 @@ export function activate(context: vscode.ExtensionContext) {
 
         /* ... */
 
+        "@langle" : "〈",
+        "@rangle" : "〉",
+
         "@leq" : "≤", /* <̱ */
         "@geq" : "≥", /* >̱ */
         "@wedge" : "∧",
@@ -37,8 +40,8 @@ export function activate(context: vscode.ExtensionContext) {
 
         "@lmapsto" : "↦​",
 
-        "@langle" : "〈​",
-        "@rangle" : "〉​",
+        "@llangle" : "〈​",
+        "@lrangle" : "〉​",
 
         "@lleq" : "≤​", /* <̱ */
         "@lgeq" : "≥​", /* >̱ */
@@ -52,12 +55,6 @@ export function activate(context: vscode.ExtensionContext) {
         "@exists" : "⋁​",
         "@ldoublevee" : "⩔​​", /* ⩖ */
         "@doubleor" : "⩔​​",
-        /*
-        "@Rightarrow" : "⟹",
-        "@Leftarrow" : "⟸",
-        "@Downarrow" : "⇓",
-        "@Uparrow" : "⇑",
-        */
 
         /* ⥽ ⥼ ⥿ ⥾ */
         "@nlt" : "≺",
@@ -66,6 +63,8 @@ export function activate(context: vscode.ExtensionContext) {
         "@ngeq" : "⪰", /* ≻̱ */
         "@nwedge" : "⋏",
         "@nvee" : "⋎",
+
+        /* BAGS */
 
         "@in" : "∈",
         "@subset" : "⊂",
@@ -76,6 +75,8 @@ export function activate(context: vscode.ExtensionContext) {
         "@cap" : "∪",
         "@bigcup" : "⋂",
         "@bigcap" : "⋃",
+
+        /* LISTS */
 
         "@sqin" : "⋿",
         "@sqsubset" : "⊏",

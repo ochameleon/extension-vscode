@@ -36,6 +36,8 @@ function activate(context) {
         "@leftrightarrow": "↔",
         "@mapsto": "↦",
         /* ... */
+        "@langle": "〈",
+        "@rangle": "〉",
         "@leq": "≤",
         "@geq": "≥",
         "@wedge": "∧",
@@ -51,8 +53,8 @@ function activate(context) {
         "@lleftrightarrow": "↔​",
         "@iff": "↔​",
         "@lmapsto": "↦​",
-        "@langle": "〈​",
-        "@rangle": "〉​",
+        "@llangle": "〈​",
+        "@lrangle": "〉​",
         "@lleq": "≤​",
         "@lgeq": "≥​",
         "@lwedge": "∧​",
@@ -65,12 +67,6 @@ function activate(context) {
         "@exists": "⋁​",
         "@ldoublevee": "⩔​​",
         "@doubleor": "⩔​​",
-        /*
-        "@Rightarrow" : "⟹",
-        "@Leftarrow" : "⟸",
-        "@Downarrow" : "⇓",
-        "@Uparrow" : "⇑",
-        */
         /* ⥽ ⥼ ⥿ ⥾ */
         "@nlt": "≺",
         "@ngt": "≻",
@@ -78,6 +74,7 @@ function activate(context) {
         "@ngeq": "⪰",
         "@nwedge": "⋏",
         "@nvee": "⋎",
+        /* BAGS */
         "@in": "∈",
         "@subset": "⊂",
         "@supset": "⊃",
@@ -87,6 +84,7 @@ function activate(context) {
         "@cap": "∪",
         "@bigcup": "⋂",
         "@bigcap": "⋃",
+        /* LISTS */
         "@sqin": "⋿",
         "@sqsubset": "⊏",
         "@sqsupset": "⊐",
