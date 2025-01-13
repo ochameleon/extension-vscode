@@ -28,8 +28,13 @@ const vscode = __importStar(require("vscode"));
 function activate(context) {
     const shortcuts = {
         /* METAFORMAL */
-        "@sb": "❙​",
-        "@bb": "¦​",
+        /* 𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇 */
+        "@structure": "𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲",
+        "@attributes": "𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀",
+        "@axioms": "𝗮𝘅𝗶𝗼𝗺𝘀",
+        "@theorems": "𝘁𝗵𝗲𝗼𝗿𝗲𝗺𝘀",
+        "@sb": "❙",
+        "@bb": "¦",
         /* ... */
         "@to": "→",
         "@rightarrow": "→",
@@ -65,8 +70,8 @@ function activate(context) {
         "@forall": "⋀​",
         "@lbigvee": "⋁​",
         "@exists": "⋁​",
-        "@ldoublevee": "⩔​​",
-        "@doubleor": "⩔​​",
+        "@ldoublevee": "⩔​",
+        "@doubleor": "⩔​",
         /* ⥽ ⥼ ⥿ ⥾ */
         "@nlt": "≺",
         "@ngt": "≻",
@@ -80,8 +85,8 @@ function activate(context) {
         "@supset": "⊃",
         "@subseteq": "⊆",
         "@supseteq": "⊇",
-        "@cup": "∩",
-        "@cap": "∪",
+        "@cap": "∩",
+        "@cup": "∪",
         "@bigcup": "⋂",
         "@bigcap": "⋃",
         /* LISTS */
@@ -98,8 +103,8 @@ function activate(context) {
         "@rfloor": "⌋",
         "@lceil": "⌈",
         "@rceil": "⌉",
-        "@Delta": "∆",
-        "@delta": "δ",
+        "@Dabla": "∆",
+        "@dabla": "ẟ",
         "@Nabla": "∇",
         "@nabla": "ƍ",
         "@sum": "∑",
@@ -110,7 +115,7 @@ function activate(context) {
         "@beta": "β",
         "@varbeta": "ϐ",
         "@gamma": "γ",
-        /**/
+        "@delta": "δ",
         "@epsilon": "ϵ",
         "@varepsilon": "ε",
         "@zeta": "ζ",
@@ -142,7 +147,7 @@ function activate(context) {
         "@Alpha": "Α",
         "@Beta": "Β",
         "@Gamma": "Γ",
-        /**/
+        "@Delta": "Δ",
         "@Epsilon": "Ε",
         "@Zeta": "Ζ",
         "@Eta": "Η",

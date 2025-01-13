@@ -3,8 +3,9 @@ export function activate(context: vscode.ExtensionContext) {
     const shortcuts: { [key: string]: string } = {
         /* METAFORMAL */
 
-        "@sb" : "❙​",
-        "@bb" : "¦​",
+        "@sb" : "❙",
+
+        "@bb" : "¦",
 
         /* ... */
 
@@ -19,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
         "@langle" : "〈",
         "@rangle" : "〉",
 
-        "@leq" : "≤", /* <̱ */
+        "@leq" : "≤", /* <̱  */
         "@geq" : "≥", /* >̱ */
         "@wedge" : "∧",
         "@vee" : "∨",
@@ -43,8 +44,8 @@ export function activate(context: vscode.ExtensionContext) {
         "@llangle" : "〈​",
         "@lrangle" : "〉​",
 
-        "@lleq" : "≤​", /* <̱ */
-        "@lgeq" : "≥​", /* >̱ */
+        "@lleq" : "≤​",
+        "@lgeq" : "≥​",
         "@lwedge" : "∧​",
         "@and" : "∧​",
         "@lvee" : "∨​",
@@ -53,8 +54,8 @@ export function activate(context: vscode.ExtensionContext) {
         "@forall" : "⋀​",
         "@lbigvee" : "⋁​",
         "@exists" : "⋁​",
-        "@ldoublevee" : "⩔​​", /* ⩖ */
-        "@doubleor" : "⩔​​",
+        "@ldoublevee" : "⩔​",
+        "@doubleor" : "⩔​",
 
         /* ⥽ ⥼ ⥿ ⥾ */
         "@nlt" : "≺",
@@ -71,8 +72,8 @@ export function activate(context: vscode.ExtensionContext) {
         "@supset" : "⊃",
         "@subseteq" : "⊆", /* ⊂̱ */
         "@supseteq" : "⊇", /* ⊃̱ */
-        "@cup" : "∩",
-        "@cap" : "∪",
+        "@cap" : "∩",
+        "@cup" : "∪",
         "@bigcup" : "⋂",
         "@bigcap" : "⋃",
 
@@ -94,8 +95,8 @@ export function activate(context: vscode.ExtensionContext) {
         "@rceil" : "⌉",
 
 
-        "@Delta" : "∆",
-        "@delta" : "δ",
+        "@Dabla" : "∆",
+        "@dabla" : "ẟ",
         "@Nabla" : "∇",
         "@nabla" : "ƍ",
         "@sum" : "∑",
@@ -108,7 +109,7 @@ export function activate(context: vscode.ExtensionContext) {
         "@beta" : "β",
         "@varbeta" : "ϐ",
         "@gamma" : "γ",
-        /**/
+        "@delta" : "δ",
         "@epsilon" : "ϵ",
         "@varepsilon" : "ε",
         "@zeta" : "ζ",
@@ -141,7 +142,7 @@ export function activate(context: vscode.ExtensionContext) {
         "@Alpha" : "Α",
         "@Beta" : "Β",
         "@Gamma" : "Γ",
-        /**/
+        "@Delta" : "Δ",
         "@Epsilon" : "Ε",
         "@Zeta" : "Ζ",
         "@Eta" : "Η",
