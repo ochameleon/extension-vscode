@@ -28,13 +28,8 @@ const vscode = __importStar(require("vscode"));
 function activate(context) {
     const shortcuts = {
         /* METAFORMAL */
-        /* 𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇 */
-        "@structure": "𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲",
-        "@attributes": "𝗮𝘁𝘁𝗿𝗶𝗯𝘂𝘁𝗲𝘀",
-        "@axioms": "𝗮𝘅𝗶𝗼𝗺𝘀",
-        "@theorems": "𝘁𝗵𝗲𝗼𝗿𝗲𝗺𝘀",
-        "@sb": "❙",
-        "@bb": "¦",
+        "@of": "❙",
+        "@have": "¦",
         /* ... */
         "@to": "→",
         "@rightarrow": "→",
@@ -111,6 +106,60 @@ function activate(context) {
         "@int": "∫",
         "@prod": "∏",
         "@coprod": "∐",
+        /* Blackboard */
+        "@bba": "𝕒",
+        "@bbb": "𝕓",
+        "@bbc": "𝕔",
+        "@bbd": "𝕕",
+        "@bbe": "𝕖",
+        "@bbf": "𝕗",
+        "@bbg": "𝕘",
+        "@bbh": "𝕙",
+        "@bbi": "𝕚",
+        "@bbj": "𝕛",
+        "@bbk": "𝕜",
+        "@bbl": "𝕝",
+        "@bbm": "𝕞",
+        "@bbn": "𝕟",
+        "@bbo": "𝕠",
+        "@bbp": "𝕡",
+        "@bbq": "𝕢",
+        "@bbr": "𝕣",
+        "@bbs": "𝕤",
+        "@bbt": "𝕥",
+        "@bbu": "𝕦",
+        "@bbv": "𝕧",
+        "@bbw": "𝕨",
+        "@bbx": "𝕩",
+        "@bby": "𝕪",
+        "@bbz": "𝕫",
+        "@bbA": "𝔸",
+        "@bbB": "𝔹",
+        "@bbC": "ℂ",
+        "@bbD": "𝔻",
+        "@bbE": "𝔼",
+        "@bbF": "𝔽",
+        "@bbG": "𝔾",
+        "@bbH": "ℍ",
+        "@bbI": "𝕀",
+        "@bbJ": "𝕁",
+        "@bbK": "𝕂",
+        "@bbL": "𝕃",
+        "@bbM": "𝕄",
+        "@bbN": "ℕ",
+        "@bbO": "𝕆",
+        "@bbP": "ℙ",
+        "@bbQ": "ℚ",
+        "@bbR": "ℝ",
+        "@bbS": "𝕊",
+        "@bbT": "𝕋",
+        "@bbU": "𝕌",
+        "@bbV": "𝕍",
+        "@bbW": "𝕎",
+        "@bbX": "𝕏",
+        "@bbY": "𝕐",
+        "@bbZ": "ℤ",
+        /* GREEK */
         "@alpha": "α",
         "@beta": "β",
         "@varbeta": "ϐ",
@@ -179,19 +228,18 @@ function activate(context) {
         const changes = event.contentChanges;
         for (const change of changes) {
             const text = change.text;
-            // Procedi solo se l'input è "\n" o "("
-            if (text === "@" || text === '\n' || text === " " || text === "_" || text === '(' || text === ')') {
-                const range = change.range;
-                const lineText = document.lineAt(range.start.line).text;
-                const endOfLine = range.start.character;
-                // Analizza il testo prima del trigger
-                const beforeText = lineText.slice(0, endOfLine);
-                for (const [shortcut, symbol] of Object.entries(shortcuts)) {
-                    if (beforeText.endsWith(shortcut)) {
-                        const start = endOfLine - shortcut.length;
+            const range = change.range;
+            const lineText = document.lineAt(range.start.line).text;
+            const endOfLine = range.start.character;
+            const beforeText = lineText.slice(0, endOfLine);
+            for (const [shortcut, symbol] of Object.entries(shortcuts)) {
+                if (beforeText.endsWith(shortcut)) {
+                    const start = endOfLine - shortcut.length;
+                    const nextCharacter = lineText[endOfLine] || " ";
+                    const isDelimiter = /\s|[()_@]/.test(nextCharacter);
+                    if (isDelimiter) {
                         const startPosition = new vscode.Position(range.start.line, start);
                         const endPosition = new vscode.Position(range.start.line, endOfLine);
-                        // Sostituisci il shortcut con il simbolo corrispondente
                         const replaceRange = new vscode.Range(startPosition, endPosition);
                         const edit = new vscode.WorkspaceEdit();
                         edit.replace(document.uri, replaceRange, symbol);
