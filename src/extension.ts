@@ -4,8 +4,11 @@ export function activate(context: vscode.ExtensionContext) {
         /* METAFORMAL */
 
         "@of" : "❙",
-
         "@have" : "¦",
+
+        /* PROOF */
+
+        "@proof" : "□■", /* */
 
         /* ... */
 
@@ -54,6 +57,8 @@ export function activate(context: vscode.ExtensionContext) {
         "@forall" : "⋀​",
         "@lbigvee" : "⋁​",
         "@exists" : "⋁​",
+        "@ldoublewedge" : "⩓​",
+        "@doubleand" : "⩓​",
         "@ldoublevee" : "⩔​",
         "@doubleor" : "⩔​",
 

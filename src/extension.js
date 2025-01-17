@@ -30,6 +30,8 @@ function activate(context) {
         /* METAFORMAL */
         "@of": "❙",
         "@have": "¦",
+        /* PROOF */
+        "@proof": "□■",
         /* ... */
         "@to": "→",
         "@rightarrow": "→",
@@ -65,6 +67,8 @@ function activate(context) {
         "@forall": "⋀​",
         "@lbigvee": "⋁​",
         "@exists": "⋁​",
+        "@ldoublewedge": "⩓​",
+        "@doubleand": "⩓​",
         "@ldoublevee": "⩔​",
         "@doubleor": "⩔​",
         /* ⥽ ⥼ ⥿ ⥾ */
