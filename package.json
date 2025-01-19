@@ -1,5 +1,5 @@
 {
-    "name": "OChameleon",
+    "name": "ochameleon",
     "displayName": "OChameleon",
     "description": "OChameleon language support for VS Code",
     "version": "0.0.0",
@@ -45,7 +45,6 @@
         "[source.OChameleon]": {
             "editor.autoClosingBrackets": "always"
         }
-
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
