@@ -227,7 +227,7 @@ function activate(context) {
         /* ⁄ */
         /* ― */
     };
-    context.subscriptions.push(vscode.workspace.onDidChangeTextDocument(event => {
+    context.subscriptions.push(vscode.workspace.onDidChangeTextDocument(async (event) => {
         const document = event.document;
         const changes = event.contentChanges;
         for (const change of changes) {
@@ -240,14 +240,21 @@ function activate(context) {
                 if (beforeText.endsWith(shortcut)) {
                     const start = endOfLine - shortcut.length;
                     const nextCharacter = lineText[endOfLine] || " ";
-                    const isDelimiter = /\s|[()_@]/.test(nextCharacter);
+                    const isDelimiter = /\s|[()_@,]/.test(nextCharacter);
                     if (isDelimiter) {
                         const startPosition = new vscode.Position(range.start.line, start);
                         const endPosition = new vscode.Position(range.start.line, endOfLine);
                         const replaceRange = new vscode.Range(startPosition, endPosition);
                         const edit = new vscode.WorkspaceEdit();
                         edit.replace(document.uri, replaceRange, symbol);
-                        vscode.workspace.applyEdit(edit);
+                        await vscode.workspace.applyEdit(edit);
+                        if (shortcut === "@proof") {
+                            const activeEditor = vscode.window.activeTextEditor;
+                            if (activeEditor) {
+                                const cursorPosition = new vscode.Position(range.start.line, start + 1);
+                                activeEditor.selection = new vscode.Selection(cursorPosition, cursorPosition);
+                            }
+                        }
                         break;
                     }
                 }
