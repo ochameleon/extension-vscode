@@ -1,5 +1,35 @@
 import * as vscode from 'vscode';
+
 export function activate(context: vscode.ExtensionContext) {
+    /*
+        keyword
+        keyword.operator
+        keyword.other
+        keyword.other.namespace
+        keyword.control
+
+        storage.type
+        storage.modifier
+
+        comment
+        
+        entity.name.type
+        entity.name.type.parameter
+        entity.name.type.enum
+        entity.name.type.alias
+        entity.name.function
+        entity.name.class
+        entity.name.property
+        entity.name.event
+        entity.name.constant
+        entity.name.namespace
+
+        constant.language
+        constant.numeric
+
+        string.quoted.double
+    */
+    
     const shortcuts: { [key: string]: string } = {
         /* METAFORMAL */
 
@@ -8,15 +38,19 @@ export function activate(context: vscode.ExtensionContext) {
 
         /* PROOF */
 
-        "@proof" : "□■", /* */
+        "@proof" : "□■", /* ⬚ */
 
         /* ... */
+
+        "@ismap" : "⟜", /* ⊸ */
 
         "@to" : "→", /* ⟶ */
         "@rightarrow": "→",
         "@leftrightarrow" : "↔", /* ⟷ */
 
         "@mapsto" : "↦", /* ⟼ */
+
+        "@comp" : "∘",
 
         /* ... */
 
@@ -29,38 +63,13 @@ export function activate(context: vscode.ExtensionContext) {
         "@vee" : "∨",
         "@bigwedge" : "⋀",
         "@bigvee" : "⋁",
-        
+
+        "@ldoublewedge" : "⩓",
+        "@doublevee" : "⩔",
+
         /* LOGIC VERSION */
 
         "@l" : "​",
-
-        "@l=" : "=​",
-
-        "@lto" : "→​",
-        "@lrightarrow": "→​",
-        "@imp" : "→​",
-        "@lleftrightarrow" : "↔​",
-        "@iff" : "↔​",
-
-        "@lmapsto" : "↦​",
-
-        "@llangle" : "〈​",
-        "@lrangle" : "〉​",
-
-        "@lleq" : "≤​",
-        "@lgeq" : "≥​",
-        "@lwedge" : "∧​",
-        "@and" : "∧​",
-        "@lvee" : "∨​",
-        "@or" : "∨​",
-        "@lbigwedge" : "⋀​",
-        "@forall" : "⋀​",
-        "@lbigvee" : "⋁​",
-        "@exists" : "⋁​",
-        "@ldoublewedge" : "⩓​",
-        "@doubleand" : "⩓​",
-        "@ldoublevee" : "⩔​",
-        "@doubleor" : "⩔​",
 
         /* ⥽ ⥼ ⥿ ⥾ */
         "@nlt" : "≺",
@@ -99,6 +108,7 @@ export function activate(context: vscode.ExtensionContext) {
         "@lceil" : "⌈",
         "@rceil" : "⌉",
 
+        "@infty" : "∞",
 
         "@Dabla" : "∆",
         "@dabla" : "ẟ",

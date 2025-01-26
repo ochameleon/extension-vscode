@@ -6,7 +6,6 @@
     "expression": {
       "patterns": [
         { "include": "#keyword" },
-        { "include": "#paren-expression" },
         { "include": "#string" }
       ]
     },
@@ -14,25 +13,13 @@
       "patterns": [
         {
           "match": ":|\\¦|\\|",
-          "name": "keyword.declaration"
+          "name": "keyword"
         },
         {
-          "match": "=​|→​|↔​|↦​|〈​|〉​|≤​|≥​|<​|>​|∧​|∨​|⋀​|⋁​|⩔​",
-          "name": "keyword.logic"
+          "match": "\\b(if|then|else|elif|repeat|continue|break|while|until|for)\\b",
+          "name": "keyword.control"
         }
       ]
-    },
-    "paren-expression": {
-      "begin": "\\(",
-      "end": "\\)",
-      "beginCaptures": {
-        "0": { "name": "punctuation.paren.open" }
-      },
-      "endCaptures": {
-        "0": { "name": "punctuation.paren.close" }
-      },
-      "name": "expression.group",
-      "patterns": [{ "include": "#expression" }]
     },
     "string": {
       "patterns": [

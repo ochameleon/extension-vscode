@@ -32,7 +32,7 @@
                 "aliases": [
                     "ochameleon"
                 ],
-                "configuration": "./language-configuration.json"
+                "configuration": "./languages/OChameleon.tmLanguage.json"
             }
         ],
         "grammars": [
@@ -44,7 +44,13 @@
         ],
         "[source.OChameleon]": {
             "editor.autoClosingBrackets": "always"
+        },
+        "configurationDefaults": {
+            "[ochameleon]": {
+            "editor.tabSize": 2,
+            "editor.insertSpaces": true
         }
+  }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",

@@ -26,6 +26,34 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.deactivate = exports.activate = void 0;
 const vscode = __importStar(require("vscode"));
 function activate(context) {
+    /*
+        keyword
+        keyword.operator
+        keyword.other
+        keyword.other.namespace
+        keyword.control
+
+        storage.type
+        storage.modifier
+
+        comment
+        
+        entity.name.type
+        entity.name.type.parameter
+        entity.name.type.enum
+        entity.name.type.alias
+        entity.name.function
+        entity.name.class
+        entity.name.property
+        entity.name.event
+        entity.name.constant
+        entity.name.namespace
+
+        constant.language
+        constant.numeric
+
+        string.quoted.double
+    */
     const shortcuts = {
         /* METAFORMAL */
         "@of": "❙",
@@ -33,10 +61,12 @@ function activate(context) {
         /* PROOF */
         "@proof": "□■",
         /* ... */
+        "@ismap": "⟜",
         "@to": "→",
         "@rightarrow": "→",
         "@leftrightarrow": "↔",
         "@mapsto": "↦",
+        "@comp": "∘",
         /* ... */
         "@langle": "〈",
         "@rangle": "〉",
@@ -46,31 +76,10 @@ function activate(context) {
         "@vee": "∨",
         "@bigwedge": "⋀",
         "@bigvee": "⋁",
+        "@ldoublewedge": "⩓",
+        "@doublevee": "⩔",
         /* LOGIC VERSION */
         "@l": "​",
-        "@l=": "=​",
-        "@lto": "→​",
-        "@lrightarrow": "→​",
-        "@imp": "→​",
-        "@lleftrightarrow": "↔​",
-        "@iff": "↔​",
-        "@lmapsto": "↦​",
-        "@llangle": "〈​",
-        "@lrangle": "〉​",
-        "@lleq": "≤​",
-        "@lgeq": "≥​",
-        "@lwedge": "∧​",
-        "@and": "∧​",
-        "@lvee": "∨​",
-        "@or": "∨​",
-        "@lbigwedge": "⋀​",
-        "@forall": "⋀​",
-        "@lbigvee": "⋁​",
-        "@exists": "⋁​",
-        "@ldoublewedge": "⩓​",
-        "@doubleand": "⩓​",
-        "@ldoublevee": "⩔​",
-        "@doubleor": "⩔​",
         /* ⥽ ⥼ ⥿ ⥾ */
         "@nlt": "≺",
         "@ngt": "≻",
@@ -102,6 +111,7 @@ function activate(context) {
         "@rfloor": "⌋",
         "@lceil": "⌈",
         "@rceil": "⌉",
+        "@infty": "∞",
         "@Dabla": "∆",
         "@dabla": "ẟ",
         "@Nabla": "∇",
