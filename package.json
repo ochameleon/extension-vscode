@@ -44,13 +44,7 @@
         ],
         "[source.OChameleon]": {
             "editor.autoClosingBrackets": "always"
-        },
-        "configurationDefaults": {
-            "[ochameleon]": {
-            "editor.tabSize": 2,
-            "editor.insertSpaces": true
         }
-  }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",

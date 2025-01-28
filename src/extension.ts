@@ -40,9 +40,10 @@ export function activate(context: vscode.ExtensionContext) {
 
         "@proof" : "□■", /* ⬚ */
 
-        /* ... */
+        "@lproof" : "□",
+        "@rproof" : "■",
 
-        "@ismap" : "⟜", /* ⊸ */
+        /* ... */
 
         "@to" : "→", /* ⟶ */
         "@rightarrow": "→",
@@ -53,6 +54,8 @@ export function activate(context: vscode.ExtensionContext) {
         "@comp" : "∘",
 
         /* ... */
+
+        "@angle" : "〈〉",
 
         "@langle" : "〈",
         "@rangle" : "〉",
@@ -275,7 +278,7 @@ export function activate(context: vscode.ExtensionContext) {
                             edit.replace(document.uri, replaceRange, symbol);
                             await vscode.workspace.applyEdit(edit);
                             
-                            if (shortcut === "@proof") {
+                            if (shortcut === "@proof" || shortcut === "@angle") {
                                 const activeEditor = vscode.window.activeTextEditor;
                                 if (activeEditor) {
                                     const cursorPosition = new vscode.Position(

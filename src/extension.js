@@ -60,14 +60,16 @@ function activate(context) {
         "@have": "¦",
         /* PROOF */
         "@proof": "□■",
+        "@lproof": "□",
+        "@rproof": "■",
         /* ... */
-        "@ismap": "⟜",
         "@to": "→",
         "@rightarrow": "→",
         "@leftrightarrow": "↔",
         "@mapsto": "↦",
         "@comp": "∘",
         /* ... */
+        "@angle": "〈〉",
         "@langle": "〈",
         "@rangle": "〉",
         "@leq": "≤",
@@ -258,7 +260,7 @@ function activate(context) {
                         const edit = new vscode.WorkspaceEdit();
                         edit.replace(document.uri, replaceRange, symbol);
                         await vscode.workspace.applyEdit(edit);
-                        if (shortcut === "@proof") {
+                        if (shortcut === "@proof" || shortcut === "@angle") {
                             const activeEditor = vscode.window.activeTextEditor;
                             if (activeEditor) {
                                 const cursorPosition = new vscode.Position(range.start.line, start + 1);
