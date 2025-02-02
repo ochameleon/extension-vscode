@@ -60,6 +60,8 @@ export function activate(context: vscode.ExtensionContext) {
         "@langle" : "〈",
         "@rangle" : "〉",
 
+        "@neg" : "¬",
+
         "@leq" : "≤", /* <̱  */
         "@geq" : "≥", /* >̱ */
         "@wedge" : "∧",
@@ -266,7 +268,7 @@ export function activate(context: vscode.ExtensionContext) {
                         const start = endOfLine - shortcut.length;
 
                         const nextCharacter = lineText[endOfLine] || " ";
-                        const isDelimiter = /\s|[()_@,]/.test(nextCharacter);
+                        const isDelimiter = /[\s()_@,]/.test(nextCharacter);
     
                         if (isDelimiter) {
                             const startPosition = new vscode.Position(range.start.line, start);
@@ -277,19 +279,9 @@ export function activate(context: vscode.ExtensionContext) {
 
                             edit.replace(document.uri, replaceRange, symbol);
                             await vscode.workspace.applyEdit(edit);
-                            
-                            if (shortcut === "@proof" || shortcut === "@angle") {
-                                const activeEditor = vscode.window.activeTextEditor;
-                                if (activeEditor) {
-                                    const cursorPosition = new vscode.Position(
-                                        range.start.line,
-                                        start + 1
-                                    );
-                                    activeEditor.selection = new vscode.Selection(cursorPosition, cursorPosition);
-                                }
-                            }
-                            break;
                         }
+                        
+                        break;
                     }
                 }
             }
