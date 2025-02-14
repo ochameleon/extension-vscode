@@ -14,7 +14,7 @@
     "keyword": {
       "patterns": [
         {
-          "match": ":|\\¦|\\||❙",
+          "match": ":|\\¦|\\||·|❙",
           "name": "keyword"
         },
         {

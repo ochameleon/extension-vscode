@@ -56,7 +56,8 @@ function activate(context) {
     */
     const shortcuts = {
         /* METAFORMAL */
-        "@of": "❙",
+        "@|": "❙",
+        "@:": "·",
         "@have": "¦",
         /* PROOF */
         "@proof": "□■",

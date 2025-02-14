@@ -33,7 +33,8 @@ export function activate(context: vscode.ExtensionContext) {
     const shortcuts: { [key: string]: string } = {
         /* METAFORMAL */
 
-        "@of" : "❙",
+        "@|" : "❙",
+        "@:" : "·",
         "@have" : "¦",
 
         /* PROOF */
