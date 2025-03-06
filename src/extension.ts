@@ -28,6 +28,8 @@ export function activate(context: vscode.ExtensionContext) {
         constant.numeric
 
         string.quoted.double
+
+        invalid.illegal
     */
     
     const shortcuts: { [key: string]: string } = {

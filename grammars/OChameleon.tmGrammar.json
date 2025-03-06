@@ -14,7 +14,7 @@
     "entity": {
       "patterns" : [
         {
-          "match": "old",
+          "match": "past",
           "name": "entity.name.type.alias"
         }
       ]
@@ -22,7 +22,7 @@
     "keyword": {
       "patterns": [
         {
-          "match": ":|\\¦|\\||·|❙",
+          "match": ":|¦|\\||·|❙",
           "name": "keyword"
         },
         {

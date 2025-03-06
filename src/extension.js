@@ -53,6 +53,8 @@ function activate(context) {
         constant.numeric
 
         string.quoted.double
+
+        invalid.illegal
     */
     const shortcuts = {
         /* METAFORMAL */
