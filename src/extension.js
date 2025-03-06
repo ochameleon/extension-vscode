@@ -56,6 +56,7 @@ function activate(context) {
     */
     const shortcuts = {
         /* METAFORMAL */
+        "@of": "₍₎",
         "@|": "❙",
         "@:": "·",
         "@have": "¦",
@@ -64,6 +65,7 @@ function activate(context) {
         "@lproof": "□",
         "@rproof": "■",
         /* ... */
+        "@from": "⊸",
         "@to": "→",
         "@rightarrow": "→",
         "@leftrightarrow": "↔",
@@ -115,6 +117,8 @@ function activate(context) {
         "@rfloor": "⌋",
         "@lceil": "⌈",
         "@rceil": "⌉",
+        /* NUMBERS */
+        "@*": "×",
         "@infty": "∞",
         "@Dabla": "∆",
         "@dabla": "ẟ",

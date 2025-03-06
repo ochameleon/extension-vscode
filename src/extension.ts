@@ -33,6 +33,8 @@ export function activate(context: vscode.ExtensionContext) {
     const shortcuts: { [key: string]: string } = {
         /* METAFORMAL */
 
+        "@of" : "₍₎",
+
         "@|" : "❙",
         "@:" : "·",
         "@have" : "¦",
@@ -46,6 +48,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         /* ... */
 
+        "@from" : "⊸",
         "@to" : "→", /* ⟶ */
         "@rightarrow": "→",
         "@leftrightarrow" : "↔", /* ⟷ */
@@ -114,6 +117,9 @@ export function activate(context: vscode.ExtensionContext) {
         "@lceil" : "⌈",
         "@rceil" : "⌉",
 
+        /* NUMBERS */
+
+        "@*" : "×",
         "@infty" : "∞",
 
         "@Dabla" : "∆",

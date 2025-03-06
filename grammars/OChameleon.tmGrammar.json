@@ -11,6 +11,14 @@
         { "include": "#invalid" }
       ]
     },
+    "entity": {
+      "patterns" : [
+        {
+          "match": "old",
+          "name": "entity.name.type.alias"
+        }
+      ]
+    },
     "keyword": {
       "patterns": [
         {
