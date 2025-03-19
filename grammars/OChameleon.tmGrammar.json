@@ -5,29 +5,20 @@
   "repository": {
     "expression": {
       "patterns": [
-        { "include": "#entity" },
         { "include": "#keyword" },
         { "include": "#string" },
         { "include": "#invalid" }
       ]
     },
-    "entity": {
-      "patterns" : [
-        {
-          "match": "past",
-          "name": "entity.name.type.alias"
-        }
-      ]
-    },
     "keyword": {
       "patterns": [
         {
-          "match": ":|¦|\\||·|❙",
-          "name": "keyword"
+            "match": ":|¦|\\||·|❙",
+            "name": "keyword"
         },
         {
-          "match": "\\b(if|then|else|elif|repeat|continue|break|while|until|for)\\b",
-          "name": "keyword.control"
+            "match": "\\b(by|if|then|else|repeat|until|return)\\b",
+            "name": "keyword.control"
         }
       ]
     },

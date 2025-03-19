@@ -37,24 +37,59 @@ function activate(context) {
         storage.modifier
 
         comment
-        
+        comment.line
+        comment.block
+        comment.documentation
+ 
         entity.name.type
+        entity.name.type.class
+        entity.name.type.interface
         entity.name.type.parameter
         entity.name.type.enum
         entity.name.type.alias
+        entity.name.type.struct
         entity.name.function
-        entity.name.class
+        entity.name.method
         entity.name.property
         entity.name.event
         entity.name.constant
         entity.name.namespace
 
+        variable
+        variable.other
+        variable.language
+        variable.parameter
+        variable.function
+        
+        constant
         constant.language
         constant.numeric
+        constant.character.escape
 
+        punctuation
+        punctuation.separator
+        punctuation.definition
+        punctuation.definition.string
+        punctuation.definition.comment
+        punctuation.definition.variable
+
+        string
+        string.template
+        string.interpolated
+        string.quoted
+        string.quoted.single
         string.quoted.double
+        string.quoted.triple
+
+        support.type
+        support.function
+        support.constant
+
+        meta.function-call
+        meta.function-call.constructor
 
         invalid.illegal
+        invalid.deprecated
     */
     const shortcuts = {
         /* METAFORMAL */
